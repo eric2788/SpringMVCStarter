@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%--
   Created by IntelliJ IDEA.
   User: Eric Lam
@@ -13,6 +14,11 @@
 </head>
 <body>
 <%@include file="../parts/header.jsp"%>
-   this is a index page
+   <h3>Items</h3>
+   <ul>
+       <c:forEach var="item" items="${items}">
+           <li>Name: ${item.name}, Price: $${item.price}</li>
+       </c:forEach>
+   </ul>
 </body>
 </html>
